@@ -19,10 +19,15 @@ Intended for use in an existing theme or plugin.
     include_once __DIR__ . '/acf-FIELD-NAME/init.php';    
     ```
 
-5. You should now see your new field type in the “Field Type” list when you add a new field.
-6. Edit `init.php` to pass your plugin or theme details to the field class. This makes sure the field's CSS and JS load correctly.
-7. Change your field type's settings and behavior by editing `class-PREFIX-acf-field-FIELD-NAME.php`.
-8. Edit or remove `field.css` to control the field's appearance when edited by publishers (e.g. on post editor screens).
-9. Edit or remove `field.js` to adjust the field's behavior when edited by publishers.
+You should now see your new field type in the “Field Type” list when you add a new field.
+
+## Customization
+
+- Edit `init.php` to pass your plugin or theme details to the field class. This makes sure the field's CSS and JS load correctly.
+- Change your field type's settings and behavior by editing `class-PREFIX-acf-field-FIELD-NAME.php`.
+- Edit or remove `field.css` to control the field's appearance when edited by publishers (e.g. on post editor screens).
+- Edit or remove `field.js` to adjust the field's behavior when edited by publishers.
 
 If you remove `field.css` or `field.js`, be sure to also remove the `wp_enqueue` calls in `class-PREFIX-acf-field-FIELD-NAME.php`.
+
+Refer to the [acf_field class](https://github.com/AdvancedCustomFields/acf/blob/master/includes/fields/class-acf-field.php) for information about available methods to override.

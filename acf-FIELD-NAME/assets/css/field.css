@@ -1,0 +1,6 @@
+/**
+ * Included when fields of this type are rendered for editing by publishers.
+ */
+ .acf-field-FIELD-NAME .setting-font-size {
+    color: green;
+}

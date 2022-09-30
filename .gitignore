@@ -10,4 +10,3 @@ Thumbs.db
 # Dependencies
 node_modules
 vendor
-.package-lock.json

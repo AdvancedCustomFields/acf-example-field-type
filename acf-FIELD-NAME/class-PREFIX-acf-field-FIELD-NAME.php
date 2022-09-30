@@ -129,14 +129,14 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 		$version = $this->env['version'];
 
 		wp_register_script(
-			'TEXTDOMAIN',
+			'PREFIX-FIELD-NAME',
 			"{$url}assets/js/field.js",
 			array( 'acf-input' ),
 			$version
 		);
 
 		wp_register_style(
-			'TEXTDOMAIN',
+			'PREFIX-FIELD-NAME',
 			"{$url}assets/css/field.css",
 			array( 'acf-input' ),
 			$version

@@ -89,10 +89,7 @@ const renameFiles = (replacements = {}) => {
       file
     );
 
-    console.log(file);
-    console.log("--");
-    console.log(newPath);
-    // fs.renameSync(oldPath, newPath);
+    fs.renameSync(oldPath, newPath);
   });
 };
 

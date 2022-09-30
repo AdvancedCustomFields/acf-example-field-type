@@ -82,7 +82,6 @@ const questions = [
 const renameFiles = (replacements = {}) => {
   const dir = path.resolve(__dirname);
 
-
   /**
    * Rename acf-FIELD-NAME directory first. Prevents write failure during file
    * renames due to parent directory being renamed by the first find-replace.
@@ -137,6 +136,6 @@ const walkSync = (dir, filelist = []) => {
       : filelist.concat(path.join(dir, file));
   });
   return filelist.filter(
-    (path) => !path.match(/node_modules|\.git|package-lock/)
+    (path) => !path.match(/node_modules|\.git|package-lock|rename\.js/)
   );
 };

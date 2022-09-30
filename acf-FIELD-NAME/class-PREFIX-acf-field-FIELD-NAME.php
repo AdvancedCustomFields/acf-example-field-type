@@ -112,7 +112,7 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 			class="setting-font-size"
 			name="<?php echo esc_attr($field['name']) ?>"
 			value="<?php echo esc_attr($field['value']) ?>"
-			style="font-size:<?php echo $field['font_size'] ?>px;"
+			style="font-size:<?php echo esc_attr( $field['font_size'] ) ?>px;"
 		/>
 		<?php
 	}

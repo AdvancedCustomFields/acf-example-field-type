@@ -62,7 +62,7 @@ const questions = [
     FIELD_LABEL: response.fieldLabel,
     FIELD_NAME: response.fieldLabel.toLowerCase().replace(/[-\s]/g, "_"),
     "FIELD-NAME": response.fieldLabel.toLowerCase().replace(/[_\s]/g, "-"),
-    TEXTDOMAIN: response.textdomain,
+    TEXTDOMAIN: response.textDomain,
   };
 
   console.log("Replacing in file names…");

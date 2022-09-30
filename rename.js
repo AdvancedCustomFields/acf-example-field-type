@@ -81,6 +81,20 @@ const questions = [
  */
 const renameFiles = (replacements = {}) => {
   const dir = path.resolve(__dirname);
+
+
+  /**
+   * Rename acf-FIELD-NAME directory first. Prevents write failure during file
+   * renames due to parent directory being renamed by the first find-replace.
+   */
+  fs.renameSync(
+    path.resolve(__dirname, "acf-FIELD-NAME"),
+    path.resolve(
+      __dirname,
+      "acf-FIELD-NAME".replace(/FIELD-NAME/g, replacements["FIELD-NAME"])
+    )
+  );
+
   const files = walkSync(dir);
 
   files.forEach((file) => {

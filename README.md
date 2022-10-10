@@ -23,11 +23,12 @@ You should now see your new field type in the “Field Type” list when you add
 
 ## Customization
 
-- Edit `init.php` to pass your plugin or theme details to the field class. This makes sure the field's CSS and JS load correctly.
 - Change your field type's settings and behavior by editing `class-PREFIX-acf-field-FIELD-NAME.php`.
 - Edit or remove `field.css` to control the field's appearance when edited by publishers (e.g. on post editor screens).
 - Edit or remove `field.js` to adjust the field's behavior when edited by publishers.
 
 If you remove `field.css` or `field.js`, be sure to also remove the `wp_enqueue` calls in `class-PREFIX-acf-field-FIELD-NAME.php`.
+
+If you plan to use the CSS and JS files, update the '1.0' version number in `class-PREFIX-acf-field-FIELD-NAME.php` to use your theme or plugin version number or constant. This helps to invalidate browser caches for your field type assets when you update your theme or plugin.
 
 Refer to the [acf_field class](https://github.com/AdvancedCustomFields/acf/blob/master/includes/fields/class-acf-field.php) for information about available methods to override.

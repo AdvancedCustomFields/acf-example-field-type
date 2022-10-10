@@ -12,13 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 	/**
-	 * Environment values passed from the theme or plugin.
-	 *
-	 * @var array $env Plugin or theme context such as 'url' and 'version'.
-	 */
-	private $env;
-
-	/**
 	 * Controls field type visibilty in REST requests.
 	 *
 	 * @var bool
@@ -26,11 +19,16 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 	public $show_in_rest = true;
 
 	/**
-	 * Constructor.
+	 * Environment values relating to the theme or plugin.
 	 *
-	 * @param array $env Context from the plugin or theme such as 'url' and 'version'.
+	 * @var array $env Plugin or theme context such as 'url' and 'version'.
 	 */
-	public function __construct( $env ) {
+	private $env;
+
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
 		/**
 		 * Field type reference used in PHP and JS code.
 		 *
@@ -70,7 +68,10 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 			'error'	=> __( 'Error! Please enter a higher value', 'TEXTDOMAIN' ),
 		);
 
-		$this->env = $env;
+		$this->env = array(
+			'url'     => site_url( str_replace( ABSPATH, '', __DIR__ ) ), // URL to the acf-FIELD-NAME directory.
+			'version' => '1.0', // Replace this with your theme or plugin version constant.
+		);
 
 		parent::__construct();
 	}

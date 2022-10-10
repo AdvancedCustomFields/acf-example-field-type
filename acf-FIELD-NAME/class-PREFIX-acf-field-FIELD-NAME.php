@@ -19,6 +19,13 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 	private $env;
 
 	/**
+	 * Controls field type visibilty in REST requests.
+	 *
+	 * @var bool
+	 */
+	public $show_in_rest = true;
+
+	/**
 	 * Constructor.
 	 *
 	 * @param array $env Context from the plugin or theme such as 'url' and 'version'.

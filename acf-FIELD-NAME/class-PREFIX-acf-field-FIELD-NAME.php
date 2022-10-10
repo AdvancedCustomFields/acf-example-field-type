@@ -99,6 +99,9 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 				'append'		=> 'px',
 			)
 		);
+
+		// To render field settings on other tabs in ACF 6.0+:
+		// https://www.advancedcustomfields.com/resources/adding-custom-settings-fields/#moving-field-setting
 	}
 
 	/**

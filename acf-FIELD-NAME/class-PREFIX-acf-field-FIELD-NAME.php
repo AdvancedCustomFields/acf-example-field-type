@@ -142,7 +142,7 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 			$version
 		);
 
-		wp_enqueue_script( 'TEXTDOMAIN' );
-		wp_enqueue_style( 'TEXTDOMAIN' );
+		wp_enqueue_script( 'PREFIX-FIELD-NAME' );
+		wp_enqueue_style( 'PREFIX-FIELD-NAME' );
 	}
 }

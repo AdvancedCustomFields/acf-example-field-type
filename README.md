@@ -7,8 +7,8 @@ Intended for use in an existing theme or plugin.
 ## Setup
 
 1. Download this repository:
-    - [Download as a ZIP file](https://github.com/deliciousbrains/acf-example-field-type/archive/refs/heads/main.zip)
-    - Or clone with `git clone https://github.com/deliciousbrains/acf-example-field-type.git`
+    - [Download as a ZIP file](https://github.com/advancedcustomfields/acf-example-field-type/archive/refs/heads/main.zip)
+    - Or clone with `git clone https://github.com/advancedcustomfields/acf-example-field-type.git`
 2. Rename placeholder strings in file names and content such as `FIELD_NAME` manually or with the helper script: 
     - `cd` into the directory and run `npm ci` (requires [Node.js](https://nodejs.org/)).
     - Run `npm run rename` and follow the prompts.

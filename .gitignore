@@ -1,0 +1,12 @@
+# System files
+.DS_Store
+ehthumbs.db
+Thumbs.db
+
+# IDE config
+.idea
+.vscode
+
+# Dependencies
+node_modules
+vendor

@@ -56,16 +56,16 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 		$this->description = __( 'FIELD_DESCRIPTION', 'TEXTDOMAIN' );
 
 		/**
-		 * Field type doc URL.
+		 * Field type Doc URL.
 		 *
-		 * For linking to documentation pages.
+		 * For linking to a documentation page. Displayed in the field picker modal.
 		 */
 		$this->doc_url = 'https://<DOC_URL>';
 
 		/**
 		 * Field type Tutorial URL.
 		 *
-		 * For linking to a tutorial resource.
+		 * For linking to a tutorial resource. Displayed in the field picker modal.
 		 */
 		$this->tutorial_url = 'https://<TUTORIAL_URL>';
 		
@@ -99,7 +99,7 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 		 *
 		 * A preview image for the field type in the picker modal.
 		 */
-		$this->preview_image = $this->env['url'] + 'assets/images/field-preview-custom.png';
+		$this->preview_image = $this->env['url'] . '/assets/images/field-preview-custom.png';
 
 		parent::__construct();
 	}

@@ -99,7 +99,7 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 		 *
 		 * A preview image for the field type in the picker modal.
 		 */
-		$this->preview_image = $this->env + 'assets/images/field-preview-custom.png';
+		$this->preview_image = $this->env['url'] + 'assets/images/field-preview-custom.png';
 
 		parent::__construct();
 	}

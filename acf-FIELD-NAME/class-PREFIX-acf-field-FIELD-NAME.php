@@ -49,6 +49,27 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 		$this->category = 'basic'; // basic | content | choice | relational | jquery | layout | CUSTOM GROUP NAME
 
 		/**
+		 * Field type Description.
+		 *
+		 * For field descriptions. May contain spaces.
+		 */
+		$this->description = __( 'FIELD_DESCRIPTION', 'TEXTDOMAIN' );
+
+		/**
+		 * Field type doc URL.
+		 *
+		 * For linking to documentation pages.
+		 */
+		$this->doc_url = 'https://<DOC_URL>';
+
+		/**
+		 * Field type Tutorial URL.
+		 *
+		 * For linking to a tutorial resource.
+		 */
+		$this->tutorial_url = 'https://<TUTORIAL_URL>';
+		
+		/**
 		 * Defaults for your custom user-facing settings for this field type.
 		 */
 		$this->defaults = array(
@@ -72,6 +93,13 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 			'url'     => site_url( str_replace( ABSPATH, '', __DIR__ ) ), // URL to the acf-FIELD-NAME directory.
 			'version' => '1.0', // Replace this with your theme or plugin version constant.
 		);
+
+		/**
+		 * Field type preview image.
+		 *
+		 * A preview image for the field type in the picker modal.
+		 */
+		$this->preview_image = $this->env + 'assets/images/field-preview-custom.png';
 
 		parent::__construct();
 	}

@@ -60,15 +60,15 @@ class PREFIX_acf_field_FIELD_NAME extends \acf_field {
 		 *
 		 * For linking to a documentation page. Displayed in the field picker modal.
 		 */
-		$this->doc_url = 'https://<DOC_URL>';
+		$this->doc_url = __( 'FIELD_DOC_URL', 'TEXTDOMAIN' );
 
 		/**
 		 * Field type Tutorial URL.
 		 *
 		 * For linking to a tutorial resource. Displayed in the field picker modal.
 		 */
-		$this->tutorial_url = 'https://<TUTORIAL_URL>';
-		
+		$this->tutorial_url = __( 'FIELD_TUTORIAL_URL', 'TEXTDOMAIN' );
+
 		/**
 		 * Defaults for your custom user-facing settings for this field type.
 		 */

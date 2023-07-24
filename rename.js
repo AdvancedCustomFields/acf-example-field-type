@@ -44,24 +44,18 @@ const questions = [
     name: "fieldDescription",
     message: "Field Description:",
     initial: "This field does amazing things.",
-    validate: (text) =>
-      text.match(/[^A-Za-z0-9_-\s]/g)
-        ? "Description allows alphanumeric English characters, spaces, underscores and dashes."
-        : true,
   },
   {
     type: "text",
     name: "fieldDocLink",
     message: "Documentation Link:",
     initial: "",
-    validate: true,
   },
   {
     type: "text",
     name: "fieldTutorialLink",
     message: "Field Tutorial Link:",
     initial: "",
-    validate: true,
   },
 ];
 

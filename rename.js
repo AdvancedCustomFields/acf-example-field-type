@@ -39,6 +39,24 @@ const questions = [
     validate: (text) =>
       text.match(/[^a-z0-9-]/g) ? "Text domain allows a-z, 0-9 and '-'." : true,
   },
+  {
+    type: "text",
+    name: "fieldDescription",
+    message: "Field Description:",
+    initial: "This field does amazing things.",
+  },
+  {
+    type: "text",
+    name: "fieldDocLink",
+    message: "Documentation Link:",
+    initial: "",
+  },
+  {
+    type: "text",
+    name: "fieldTutorialLink",
+    message: "Field Tutorial Link:",
+    initial: "",
+  },
 ];
 
 (async () => {
@@ -63,6 +81,9 @@ const questions = [
     FIELD_NAME: response.fieldLabel.toLowerCase().replace(/[-\s]/g, "_"),
     "FIELD-NAME": response.fieldLabel.toLowerCase().replace(/[_\s]/g, "-"),
     TEXTDOMAIN: response.textDomain,
+    FIELD_DESCRIPTION: response.fieldDescription,
+    FIELD_DOC_URL: response.fieldDocLink,
+    FIELD_TUTORIAL_URL: response.fieldTutorialLink,
   };
 
   console.log("Replacing in file names…");
